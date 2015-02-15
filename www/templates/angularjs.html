@@ -1,0 +1,36 @@
+<ion-view title='AngularJS Chat' >
+<ion-content>
+<!-- <div class="bar bar-header" style="margin-bottom:40px">
+  <h2 class="title">AngularJS</h2>
+</div> -->
+
+<div ng-controller="AngularjsController as angular">
+<div class="list" >
+ 
+  
+  <label class="item item-input">
+    <textarea placeholder="Message" ng-model="angular.comment"></textarea>
+  </label>
+  <button class="button button-block button-royal" ng-click="angular.addComment()">
+  Send Message
+</button>
+</div>
+
+	
+
+<div ng-repeat="comment in angular.maincomments | orderBy: '-time'">
+	<div class="card">
+	  <div class="item item-text-wrap">
+	  	<h2 class="maincardauthor">{{comment.name}}</h2>
+	    <p class="maincardaiuthor">{{comment.comment}}</p>
+	    <p class="maincardaiuthor">{{comment.time}}</p>
+	  </div>
+</div>
+</div>
+
+
+
+</div>
+</ion-content>
+
+</ion-view>

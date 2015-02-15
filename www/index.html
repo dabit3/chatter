@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/ionicons/css/ionicons.css">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- AuthO -->
+    <!-- We use client cookies to save the user credentials -->
+    <script src="//code.angularjs.org/1.2.16/angular-cookies.min.js"></script>
+
+    <!-- Auth0 Lock script and AngularJS module -->
+    <script src="//cdn.auth0.com/js/lock-7.0.min.js"></script>
+    <!-- angular-jwt and angular-storage -->
+    <script type="text/javascript" src="//cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"></script>
+    <script type="text/javascript" src="//cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
+
+    <script src="//cdn.auth0.com/w2/auth0-angular-4.js"> </script>
+
+    <!-- Setting the right viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/controllers.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="GlobalController as global">
+    <ion-nav-bar class="bar-royal">
+      <!-- <ion-nav-back-button class="button-clear">
+        <i class="ion-arrow-left-c"></i> Back
+      </ion-nav-back-button>
+      <ion-nav-home-button class="button-clear">
+        <i class="ion-home"></i> Home
+      </ion-nav-back-button> -->
+      <ion-nav-back-button class="button-icon icon  ion-chevron-left">
+        Back
+      </ion-nav-back-button>
+      <ion-nav-buttons side="right">
+        <button class="button" ui-sref="/" ng-if="!global.$state.includes('/')">
+         HOME
+        </button>
+      </ion-nav-buttons>
+
+    </ion-nav-bar>
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view></ion-nav-view>
+    
+
+  </body>
+</html>

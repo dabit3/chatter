@@ -1,0 +1,59 @@
+<ion-view title='Welcome!' >
+<ion-content>
+<!-- <div class="bar bar-header" style="margin-bottom:40px">
+  <h2 class="title">AngularJS</h2>
+</div> -->
+
+<div ng-controller="SuccessController as success">
+
+
+
+
+
+<div class="card" ng-if="!success.auth.isAuthenticated">
+  <div class="item item-divider">
+    Welcome to Chatter!
+  </div>
+  <div class="item item-text-wrap">
+   Please log in!
+  </div>
+  <div class="item item-divider">
+   Footer
+  </div>
+</div>
+
+<div class="list card" ng-if="success.auth.isAuthenticated">
+
+  <a ui-sref="angularjs" class="item item-icon-left">
+    <i class="icon ion-social-angular"></i>
+    Go to Angular Chat
+  </a>
+
+  <a ui-sref="python" class="item item-icon-left">
+    <i class="icon ion-social-python"></i>
+    Go to Python Chat
+  </a>
+
+  <a ui-sref="javascript" class="item item-icon-left">
+    <i class="icon ion-social-javascript"></i>
+    Javascript
+  </a>
+
+  <a ui-sref="html5" class="item item-icon-left">
+    <i class="icon ion-social-html5"></i>
+    Go to HTML5 Chat
+  </a>
+
+   <a ui-sref="android" class="item item-icon-left">
+    <i class="icon ion-social-android"></i>
+    Go to Android Chat
+  </a>
+
+</div>
+
+
+
+</div>
+</ion-content>
+
+</ion-view>

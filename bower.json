@@ -1,0 +1,11 @@
+{
+  "name": "ChatterFinal",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.0.0-beta.14"
+  },
+  "dependencies": {
+    "ionicons": "~2.0.1",
+    "angularfire": "~0.9.2"
+  }
+}

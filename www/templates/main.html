@@ -1,0 +1,75 @@
+<ion-view title='<img class="title-image" src="img/chatter.png" style="height:38px;margin-top:3px" />' >
+<ion-content ng-controller="MainController as main">
+<div class="card" ng-if="main.auth.isAuthenticated">
+  <div class="item item-divider">
+    Welcome to Chatter!
+  </div>
+  <div class="item item-text-wrap">
+   You are logged in as {{main.auth.profile.given_name}} {{main.auth.profile.family_name}}.
+  </div>
+  <div class="item item-divider">
+   Footer
+  </div>
+</div>
+
+<div class="list"  ng-if="main.auth.isAuthenticated">
+    <a class="item item-icon-left item-icon-right" ui-sref="python">
+	    <i class="icon ion-social-python"></i>
+	    Python
+	   <i class="icon ion-ios7-arrow-right"></i>
+	  </a>
+
+	  <a class="item item-icon-left item-icon-right"  ui-sref="javascript">
+	    <i class="icon ion-social-javascript"></i>
+	    Javascript
+	   <i class="icon ion-ios7-arrow-right"></i>
+	  </a>
+
+	  <a class="item item-icon-left item-icon-right"  ui-sref="html5">
+	    <i class="icon ion-social-html5"></i>
+	    HTML5
+	   <i class="icon ion-ios7-arrow-right"></i>
+	  </a>
+
+	  <a class="item item-icon-left item-icon-right"  ui-sref="angularjs">
+	    <i class="icon ion-social-angular"></i>
+	    AngularJS
+	   <i class="icon ion-ios7-arrow-right"></i>
+	  </a>
+
+	  <a class="item item-icon-left item-icon-right"  ui-sref="android">
+	    <i class="icon ion-social-android"></i>
+	    Android
+	   <i class="icon ion-ios7-arrow-right"></i>
+	  </a>
+
+	  <a class="item item-icon-left item-icon-right"  ui-sref="profile">
+	    <i class="icon ion-ios-person"></i>
+	    Profile
+	   <i class="icon ion-ios7-arrow-right"></i>
+	  </a>
+
+	  <a class="item item-icon-left item-icon-right" ng-click="main.auth0logout()" >
+	    <i class="icon ion-log-out"></i>
+	    Logout
+	   <i class="icon ion-ios7-arrow-right"></i>
+	  </a>
+</div>
+
+<div ng-if="!main.auth.isAuthenticated">
+		<div class="card">
+		  <div class="item item-text-wrap">
+		    <h2>Welcome to Chatter!</h2>
+		    <h4>To view chatrooms, please log in!</h4>
+		  </div>
+		</div>
+	 <a class="item item-icon-left item-icon-right" ng-click="main.auth0login()" >
+	    <i class="icon ion-log-in"></i>
+	    	Login
+	   <i class="icon ion-ios7-arrow-right"></i>
+	 </a>
+
+</div>
+
+</ion-content>
+</ion-view>
