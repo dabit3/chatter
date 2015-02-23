@@ -15,3 +15,12 @@ Setup
 >    domain: 'naderdabit.auth0.com',  
 >    clientID: 'FtsX9Xg0IiryBfb001YzcT3J8f4u6jNx',  
 >});
+
+
+2. Open controllers.js
+-----------
+- Replace Firebase reference with your firebase url
+
+> var ref = new Firebase("https://jacksondevsfirebase.firebaseio.com/messages");
+
+3. From root of directory, type "bower install"
