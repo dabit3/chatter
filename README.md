@@ -5,7 +5,9 @@ Chat application built with Ionic, AngularJS, and Auth0
 Setup
 ------------
 
-1. Open app.js
+Open app.js
+-----------
+
 - Replace domain with your auth0 comain
 - replace clientID with your clientID 
 authProvider.init({
