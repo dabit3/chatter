@@ -24,3 +24,4 @@ Setup
 > var ref = new Firebase("https://jacksondevsfirebase.firebaseio.com/messages");
 
 3. From root of directory, type "bower install"
+-----------
