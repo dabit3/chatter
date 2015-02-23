@@ -11,7 +11,7 @@ Setup
 - Replace domain with your auth0 comain
 - replace clientID with your clientID 
 
->authProvider.init({ ***
->    domain: 'naderdabit.auth0.com', ***
->    clientID: 'FtsX9Xg0IiryBfb001YzcT3J8f4u6jNx', *** 
+>authProvider.init({
+>    domain: 'naderdabit.auth0.com',
+>    clientID: 'FtsX9Xg0IiryBfb001YzcT3J8f4u6jNx',   
 >});
